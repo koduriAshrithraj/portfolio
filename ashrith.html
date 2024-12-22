@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            height: 100%;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .personal-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .resume-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .resume-button:hover {
+            background-color: darkred;
+        }
+
+        .content {
+            margin-left: 30%;
+            padding: 20px;
+            overflow-y: auto;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: darkblue;
+        }
+
+        .back-button {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: darkgreen;
+        }
+
+        /* New styles for social media buttons */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .social-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-button img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Ensures the image is circular */
+            object-fit: cover; /* Ensures the image fills the circle */
+            border: 0px solid white; /* Optional: border around the image */
+            transition: transform 0.3s ease;
+        }
+
+        .social-button img:hover {
+            transform: scale(1.1); /* Slightly enlarges the logo when hovered */
+        }
+
+        .social-button label {
+            margin-top: 8px;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-pic"><img src="ashrith.jpg" class="profile-pic" alt="Profile Picture"></div>
+        <div class="personal-info">
+            <h3>Ashrith Raj</h3>
+            <p>Email: 2203a54008@sru.edu.in</p>
+            <p>Phone: +91 7331174101</p>
+            <p>Location: Warangal, Telangana, India, 506002</p>
+        </div>
+        <button class="resume-button" onclick="viewResume()">View Resume</button>
+        <p>FOLLOW ME ON</p>
+        <!-- Social Media Buttons -->
+        <div class="social-buttons">
+            <div class="social-button">
+                <a href="https://www.linkedin.com/in/ashrith-raj-7008ba285?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAEVd8nAB4zqUgIFzOgCVMfgiJXdbzTzpfIE&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BbCxf%2F7hUSaeAyU6uU%2Fm1pA%3D%3D" target="_blank">
+                    <img src="linked in.jpg" alt="LinkedIn Logo"><br>
+                    <label>LinkedIn</label>
+                </a>
+            </div>
+            <div class="social-button">
+                <a href="https://www.instagram.com/ashrith_2124?igsh=MTU4dnlxaWVrbXNsNw==" target="_blank">
+                    <img src="instagram.jpg"  alt="Instagram Logo">
+<br>
+                    <label>Instagram</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            Hello! My name is Ashrith Raj. I am a dedicated and passionate individual with a strong background in [Your Field/Industry]. I thrive on solving complex problems and bringing innovative ideas to life. With a focus on continuous learning and self-improvement, I aim to make a meaningful impact in every project I undertake.
+        </p>
+        
+        <h2>My Projects</h2>
+        <ul>
+            <li><strong>Portfolio Website:</strong>
+                I developed a responsive and visually appealing personal portfolio website to showcase my skills, experience, and projects. This project involved utilizing HTML, CSS, and JavaScript to create a seamless user interface. The site is fully optimized for both desktop and mobile devices, featuring interactive elements like animations, a responsive navigation menu, and a dynamic contact form.
+            </li>
+            <li><strong>Task Management App:</strong>
+                This web application allows users to manage their daily tasks efficiently. Key features include creating, updating, and deleting tasks, organizing tasks into categories, and setting reminders. Built with React and Node.js, the app provides a smooth and fast user experience, with data stored securely in a MongoDB database. I also implemented a user authentication system for added security.
+            </li>
+            <li><strong>Data Visualization Dashboard:</strong>
+                I created an interactive dashboard to visualize complex datasets. This project was built using D3.js and Python for data processing. The dashboard includes charts, graphs, and maps that dynamically update based on user input. It is used for real-time analytics, enabling users to extract actionable insights from the data. The design prioritizes clarity and ease of use, making it accessible to non-technical users.
+            </li>
+        </ul>
+
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <!-- Back to Home Button -->
+        <button class="back-button" onclick="goBack()">Back to Home</button>
+    </div>
+
+    <script>
+        function viewResume() {
+            // Open the resume in a new tab
+            window.open('ashrith resume.pdf', '_blank');
+        }
+
+        function goBack() {
+            // Go back to the previous page
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
